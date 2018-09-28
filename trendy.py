@@ -3,7 +3,7 @@ import pandas as pd
 from itertools import combinations
 import time
 
-def dtw_distance(x, y, d=lambda x,y: abs(x-y), scaled=False, fill=True):
+def dtw_distance(x, y, d=lambda x,y: abs(x-y), scaled=False, fill=False):
 	"""Finds the distance of two arrays by dynamic time warping method
 	source: https://en.wikipedia.org/wiki/Dynamic_time_warping
 	
@@ -63,10 +63,10 @@ class TrendCluster():
     def fit(self, series, n=2, scale=True):
         '''
         Work-flow
-        1 - make series combination with size n, initial clusters
-        2 - assign closest series to each cluster
-        3 - calculate total distance for each combinations
-        4 - choose the minimum
+        1. Create your all cluster combinations. k is for cluster count and n is for number of series. The number of items returned should be n! / k! / (n-k)!. These would be something like potential centers.
+        2. For each series, calculate distances for each center in each cluster groups and assign it to the minimum one.
+        3. For each cluster groups, calculate total distance within individual clusters.
+        4. Choose the minimum.
         
         Args:
             series: dict, keys can be anything, values are time series as list, assumes no nulls
