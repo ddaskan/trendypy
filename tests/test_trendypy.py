@@ -68,5 +68,9 @@ class TestTrendy(unittest.TestCase):
             [6, 3.5, 3.9, 3, 1.5]])
         self.assertEqual(preds, [0, 1, 1])
 
+    @unittest.skip("not ready")
+    def test_to_pickle(self):
+        pass
+
 if __name__ == '__main__':
     unittest.main()

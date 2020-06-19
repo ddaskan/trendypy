@@ -1,4 +1,5 @@
 from itertools import combinations
+import pickle
 import pandas as pd
 import algos
 
@@ -123,6 +124,32 @@ class Trendy():
         '''
         self.fit(X)
         return self.labels_
+
+    def to_pickle(self, path):
+        '''Pickle (serialize) object to a file.
+
+        Args:
+            path (str): file path where the pickled object will be stored
+
+        Example:
+            To save a `*.pkl` file:
+
+            >>> t1 = Trendy(n_clusters=2)
+            >>> t1.fit([[1, 2, 3], [2, 3, 3]])
+            >>> t1.to_pickle(path='trendy.pkl')
+
+            To load the same object later:
+
+            >>> import pickle, os
+            >>> pkl_file = open('trendy.pkl', 'rb')
+            >>> t2 = pickle.load(pkl_file)
+            >>> pkl_file.close()
+            >>> os.remove('trendy.pkl')
+
+        '''
+        output = open(path, 'wb')
+        pickle.dump(self, output, -1)
+        output.close()
 
 if __name__ == "__main__":
     import doctest
