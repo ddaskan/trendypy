@@ -125,3 +125,4 @@ dmypy.json
 .pyre/
 Icon?
 .DS_Store
+trendypy/sandbox_.py
