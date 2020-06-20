@@ -4,7 +4,7 @@ import pandas as pd
 import algos
 
 class Trendy():
-    '''
+    '''Estimator to cluster trend-lines and assign new lines accordingly. 
 
     Notes:
         Scaling and missing values need to be handled externally.
@@ -12,13 +12,25 @@ class Trendy():
     Args:
         n_clusters (int): The number of clusters to form.
         algorithm (callable): Algorithm to calculate the difference. Default 
-            is `DTW with Euclidean <#algos.dtw_distance>`_.
+            is `fast DTW with Euclidean <algos.html#algos.fastdtw_distance>`_.
+
+    Example:
+        >>> a = [1, 2, 3, 4, 5] # increasing trend
+        >>> b = [1, 2.1, 2.9, 4.4, 5.1] # increasing trend
+        >>> c = [6.2, 5, 4, 3, 2] # decreasing trend
+        >>> d = [7, 6, 5, 4, 3, 2, 1] # decreasing trend
+        >>> trendy = Trendy(n_clusters=2)
+        >>> trendy.fit([a, b, c, d])
+        >>> print(trendy.labels_)
+        [0, 0, 1, 1]
+        >>> trendy.predict([[0.9, 2, 3.1, 4]]) # another increasing trend
+        [0]
 
     '''
     labels_ = None
     cluster_centers_ = None
 
-    def __init__(self, n_clusters, algorithm=algos.dtw_distance):
+    def __init__(self, n_clusters, algorithm=algos.fastdtw_distance):
         
         self.n_clusters = int(n_clusters)
         if not self.n_clusters >= 2:
@@ -35,10 +47,10 @@ class Trendy():
             X (array of arrays): Training instances to cluster.
 
         Example:
-            >>> a = [1, 2, 3, 4, 5]
-            >>> b = [1, 2.1, 2.9, 4.4, 5.1]
-            >>> c = [6.2, 5, 4, 3, 2]
-            >>> d = [7, 6, 5, 4, 3, 2, 1]
+            >>> a = [1, 2, 3, 4, 5] # increasing
+            >>> b = [1, 2.1, 2.9, 4.4, 5.1] # increasing
+            >>> c = [6.2, 5, 4, 3, 2] # decreasing
+            >>> d = [7, 6, 5, 4, 3, 2, 1] # decreasing
             >>> trendy = Trendy(2)
             >>> trendy.fit([a, b, c, d])
             >>> print(trendy.labels_)
@@ -81,10 +93,10 @@ class Trendy():
             list: Index of the cluster each sample belongs to.
 
         Example:
-            >>> a = [1, 2, 3, 4, 5]
-            >>> b = [1, 2.1, 2.9, 4.4, 5.1]
-            >>> c = [6.2, 5, 4, 3, 2]
-            >>> d = [7, 6, 5, 4, 3, 2, 1]
+            >>> a = [1, 2, 3, 4, 5] # increasing
+            >>> b = [1, 2.1, 2.9, 4.4, 5.1] # increasing
+            >>> c = [6.2, 5, 4, 3, 2] # decreasing
+            >>> d = [7, 6, 5, 4, 3, 2, 1] # decreasing
             >>> trendy = Trendy(2)
             >>> trendy.fit([a, b, c, d])
             >>> trendy.predict([[0.9, 2, 3.1, 4]])
@@ -113,10 +125,10 @@ class Trendy():
             list: predicted labels
 
         Example:
-            >>> a = [1, 2, 3, 4, 5]
-            >>> b = [1, 2.1, 2.9, 4.4, 5.1]
-            >>> c = [6.2, 5, 4, 3, 2]
-            >>> d = [7, 6, 5, 4, 3, 2, 1]
+            >>> a = [1, 2, 3, 4, 5] # increasing
+            >>> b = [1, 2.1, 2.9, 4.4, 5.1] # increasing
+            >>> c = [6.2, 5, 4, 3, 2] # decreasing
+            >>> d = [7, 6, 5, 4, 3, 2, 1] # decreasing
             >>> trendy = Trendy(2)
             >>> trendy.fit_predict([a, b, c, d])
             [0, 0, 1, 1]
