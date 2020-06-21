@@ -1,7 +1,7 @@
 from itertools import combinations
 import pickle
 import pandas as pd
-import algos
+from trendypy import algos
 
 class Trendy():
     '''Estimator to cluster trend-lines and assign new lines accordingly. 

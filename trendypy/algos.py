@@ -3,7 +3,7 @@ Algorithms for the package.
 '''
 import numpy as np
 from fastdtw import fastdtw
-import utils
+from trendypy import utils
 
 def dtw_distance(x, y, d=utils.distance_euclidean, scaled=False):
     '''Returns the distance of two arrays with dynamic time warping method.

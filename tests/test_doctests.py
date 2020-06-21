@@ -2,10 +2,9 @@ import sys
 import unittest
 import doctest
 sys.path.append('../')
-sys.path.append('../trendypy/')
-import trendy
-import algos
-import utils
+from trendypy import trendy
+from trendypy import algos
+from trendypy import utils
 
 def load_tests(loader, tests, ignore):
     tests.addTests(doctest.DocTestSuite(trendy))
