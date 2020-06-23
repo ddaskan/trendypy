@@ -1,6 +1,8 @@
+import sys
 from itertools import combinations
 import pickle
 import pandas as pd
+sys.path.append('../')
 from trendypy import algos
 
 class Trendy():

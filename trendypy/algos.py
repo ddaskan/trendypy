@@ -1,6 +1,8 @@
 '''
 Algorithms for the package.
 '''
+import sys
+sys.path.append('../')
 import numpy as np
 from fastdtw import fastdtw
 from trendypy import utils

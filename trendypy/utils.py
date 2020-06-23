@@ -30,7 +30,7 @@ def distance_abs(x, y):
         y (float): input 2
 
     Returns:
-        float: |x-y|
+        float: \|x-y\|
 
     Example:
         >>> distance_abs(5, 7)
