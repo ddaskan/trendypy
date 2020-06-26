@@ -1,5 +1,11 @@
 # TrendyPy
 
+[![PyPI](https://img.shields.io/pypi/v/trendypy)](https://pypi.org/project/trendypy/)
+[![PyPI - License](https://img.shields.io/pypi/l/trendypy)](https://github.com/ddaskan/trendypy/blob/master/LICENSE)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/trendypy)](https://pypi.org/project/trendypy/)
+[![GitHub last commit](https://img.shields.io/github/last-commit/ddaskan/trendypy)](https://github.com/ddaskan/trendypy)
+[![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fddaskan%2Ftrendypy)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fddaskan%2Ftrendypy)
+
 TrendyPy is a small Python package for trend line clustering. It is developed to create time series clusters by calculating trend similarity distance with [Dynamic Time Warping](https://en.wikipedia.org/wiki/Dynamic_time_warping).
 
 ## Installation
