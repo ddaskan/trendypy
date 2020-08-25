@@ -1,6 +1,7 @@
 # TrendyPy
 
 [![PyPI](https://img.shields.io/pypi/v/trendypy)](https://pypi.org/project/trendypy/)
+[![Documentation Status](https://readthedocs.org/projects/trendypy/badge/?version=latest)](https://trendypy.readthedocs.io/en/latest/?badge=latest)
 [![PyPI - License](https://img.shields.io/pypi/l/trendypy)](https://github.com/ddaskan/trendypy/blob/master/LICENSE)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/trendypy)](https://pypi.org/project/trendypy/)
 [![GitHub last commit](https://img.shields.io/github/last-commit/ddaskan/trendypy)](https://github.com/ddaskan/trendypy)
@@ -36,7 +37,7 @@ Trendy has scikit-learn like api to allow easy integration to existing programs.
 [0]
 ```
 
-Refer to [this extensive demo](http://www.doganaskan.com/trendypy/source/seeinaction.html) to see it in action or just check [API Reference](http://www.doganaskan.com/trendypy/index.html#api-reference) for details.
+Refer to [this extensive demo](https://trendypy.readthedocs.io/source/seeinaction.html) to see it in action or just check [API Reference](https://trendypy.readthedocs.io/index.html#api-reference) for details.
 
 ## Post
 The idea is originated from the post [Trend Clustering](http://www.doganaskan.com/blog/posts/trendcluster.html).

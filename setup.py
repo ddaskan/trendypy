@@ -18,7 +18,7 @@ setuptools.setup(
     download_url="https://pypi.python.org/pypi/trendypy",
     project_urls={
         "Bug Tracker": "https://github.com/ddaskan/trendypy/issues",
-        "Documentation": "http://www.doganaskan.com/trendypy/",
+        "Documentation": "https://trendypy.readthedocs.io/",
         "Source Code": "https://github.com/ddaskan/trendypy",
     },
     license='MIT',
