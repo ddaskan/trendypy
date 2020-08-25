@@ -37,7 +37,7 @@ Trendy has scikit-learn like api to allow easy integration to existing programs.
 [0]
 ```
 
-Refer to [this extensive demo](https://trendypy.readthedocs.io/source/seeinaction.html) to see it in action or just check [API Reference](https://trendypy.readthedocs.io/index.html#api-reference) for details.
+Refer to [this extensive demo](https://trendypy.readthedocs.io/en/latest/source/seeinaction.html) to see it in action or just check [API Reference](https://trendypy.readthedocs.io/en/latest/index.html#api-reference) for details.
 
 ## Post
 The idea is originated from the post [Trend Clustering](http://www.doganaskan.com/blog/posts/trendcluster.html).
