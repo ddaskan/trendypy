@@ -3,6 +3,9 @@ import setuptools
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
+with open('requirements.txt', 'r') as f:
+    install_requires = f.read().splitlines()
+
 setuptools.setup(
     name="trendypy",
     version="0.1.0",
@@ -30,5 +33,5 @@ setuptools.setup(
         "Topic :: Software Development",
     ],
     python_requires='>=3.5',
-    install_requires=['numpy', 'pandas', 'fastdtw'],
+    install_requires=install_requires,
 )

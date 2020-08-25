@@ -1,0 +1,5 @@
+sphinx==3.0.3 
+pydata-sphinx-theme==0.3.0
+sphinxcontrib-napoleon==0.7
+sphinx-copybutton==0.2.12
+recommonmark==0.6.0 
