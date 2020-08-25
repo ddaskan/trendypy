@@ -82,6 +82,7 @@ html_context = {
     "github_repo": "trendypy",
     "github_version": "master",
     "doc_path": "docs",
+    'page_source_suffix': '.rst',
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
