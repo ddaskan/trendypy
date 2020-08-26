@@ -65,7 +65,7 @@ class Trendy():
 
         X_idx = pd.Series(range(X_len))
         combs = combinations(X_idx, self.n_clusters)
-        combs = [[c, -1] for c in combs]
+        combs = [[list(c), -1] for c in combs]
 
         d_matrix = pd.DataFrame(
             X_idx.apply(
@@ -164,7 +164,3 @@ class Trendy():
         output = open(path, 'wb')
         pickle.dump(self, output, -1)
         output.close()
-
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()

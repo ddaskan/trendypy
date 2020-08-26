@@ -81,7 +81,3 @@ def fastdtw_distance(x, y, d=utils.distance_euclidean):
 
     '''
     return fastdtw(x, y, dist=d)[0]
-
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
