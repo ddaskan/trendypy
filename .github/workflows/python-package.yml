@@ -32,7 +32,7 @@ jobs:
       run: |
         pip install pytest
         pip install pytest-cov
-        pytest --doctest-modules --junitxml=junit/test-results.xml --cov=trendypy --cov-report=xml --cov-report=html
+        pytest --doctest-modules --junitxml=junit/test-results-${{ matrix.python-version }}.xml --cov=trendypy --cov-report=xml --cov-report=html
     - name: Upload pytest test results
       uses: actions/upload-artifact@v2
       with:
@@ -46,4 +46,3 @@ jobs:
         directory: ./
         name: codecov-umbrella
         fail_ci_if_error: true
-        path_to_write_report: ./coverage/codecov_report.gz
