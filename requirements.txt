@@ -1,3 +1,3 @@
 numpy
-pandas<=1.0.4
+pandas
 fastdtw
