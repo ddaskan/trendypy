@@ -32,6 +32,6 @@ setuptools.setup(
         "Topic :: Scientific/Engineering :: Artificial Intelligence",
         "Topic :: Software Development",
     ],
-    python_requires='>=3.5',
+    python_requires='>=3.6',
     install_requires=install_requires,
 )
