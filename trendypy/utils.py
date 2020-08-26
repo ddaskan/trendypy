@@ -64,7 +64,3 @@ def distance_euclidean(x, y):
 
     '''
     return np.linalg.norm(np.array(x) - np.array(y))
-
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()

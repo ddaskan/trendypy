@@ -164,7 +164,3 @@ class Trendy():
         output = open(path, 'wb')
         pickle.dump(self, output, -1)
         output.close()
-
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
