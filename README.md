@@ -1,6 +1,7 @@
 # TrendyPy
 
 [![PyPI](https://img.shields.io/pypi/v/trendypy)](https://pypi.org/project/trendypy/)
+[![Codecov](https://img.shields.io/codecov/c/gh/ddaskan/trendypy)](https://codecov.io/gh/ddaskan/trendypy/)
 [![Documentation Status](https://readthedocs.org/projects/trendypy/badge/?version=latest)](https://trendypy.readthedocs.io/en/latest/?badge=latest)
 [![PyPI - License](https://img.shields.io/pypi/l/trendypy)](https://github.com/ddaskan/trendypy/blob/master/LICENSE)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/trendypy)](https://pypi.org/project/trendypy/)
