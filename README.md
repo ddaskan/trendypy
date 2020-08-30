@@ -36,7 +36,7 @@ Trendy has scikit-learn like api to allow easy integration to existing programs.
 >>> print(trendy.labels_)
 [0, 0, 1, 1]
 >>> trendy.predict([[0.9, 2, 3.1, 4]]) # another increasing trend
-[1]
+[0]
 
 ```
 
