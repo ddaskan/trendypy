@@ -68,7 +68,7 @@ Now, let's make predictions on the prediction data that we set aside earlier (i.
 .. ipython:: python
    :suppress:
 
-   assert trendy.predict([df.AAPL]) == [1]
+   assert trendy.predict([df.AAPL]) == [0]
    assert trendy.predict([df.c]) == [1]
 
 .. ipython:: python
