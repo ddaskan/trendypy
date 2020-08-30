@@ -66,7 +66,7 @@ class TestTrendy(unittest.TestCase):
             [0.9, 2, 2.9, 3.8, 5],
             [6.4, 4.4, 3.9, 3],
             [6, 3.5, 3.9, 3, 1.5]])
-        self.assertEqual(preds, [1, 1, 1])
+        self.assertEqual(preds, [0, 1, 1])
 
 if __name__ == '__main__':
     unittest.main()
