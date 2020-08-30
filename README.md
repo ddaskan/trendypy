@@ -19,7 +19,7 @@ You can install TrendyPy with pip.
 pip install trendypy
 ```
 
-TrendyPy depends on Pandas, Numpy and fastdtw and works in Python 3.5+.
+TrendyPy depends on Pandas, Numpy and fastdtw and works in Python 3.6+.
 
 ## Quickstart
 
