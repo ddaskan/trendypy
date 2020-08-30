@@ -2,9 +2,8 @@
 
 [![PyPI](https://img.shields.io/pypi/v/trendypy)](https://pypi.org/project/trendypy/)
 [![tests](https://github.com/ddaskan/trendypy/workflows/tests/badge.svg)](https://github.com/ddaskan/trendypy/actions?query=workflow%3Atests)
-[![Codecov](https://img.shields.io/codecov/c/gh/ddaskan/trendypy)](https://codecov.io/gh/ddaskan/trendypy/)
+[![Codecov](https://codecov.io/gh/ddaskan/trendypy/master.svg)](https://codecov.io/gh/ddaskan/trendypy/)
 [![Documentation Status](https://readthedocs.org/projects/trendypy/badge/?version=latest)](https://trendypy.readthedocs.io/en/latest/?badge=latest)
-[![PyPI - License](https://img.shields.io/pypi/l/trendypy)](https://github.com/ddaskan/trendypy/blob/master/LICENSE)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/trendypy)](https://pypi.org/project/trendypy/)
 [![GitHub last commit](https://img.shields.io/github/last-commit/ddaskan/trendypy)](https://github.com/ddaskan/trendypy)
 [![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fddaskan%2Ftrendypy)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fddaskan%2Ftrendypy)
