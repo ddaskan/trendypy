@@ -1,4 +1,4 @@
-# This workflow will install Python dependencies, run tests and lint with a variety of Python versions
+# This workflow will install Python dependencies, run tests and create a coverage report.
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
 name: tests
@@ -32,6 +32,7 @@ jobs:
       run: |
         pip install pytest
         pip install pytest-cov
+        python -m doctest README.md
         pytest --doctest-modules --junitxml=junit/test-results-${{ matrix.os }}-py${{ matrix.python-version }}.xml --cov=trendypy --cov-report=xml --cov-report=html
     - name: Upload pytest test results
       uses: actions/upload-artifact@v2
