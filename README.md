@@ -22,7 +22,7 @@ TrendyPy depends on Pandas, Numpy and fastdtw and works in Python 3.6+.
 
 ## Quickstart
 
-Trendy has scikit-learn like api to allow easy integration to existing programs.
+Trendy has scikit-learn like api to allow easy integration to existing programs. Below is a quick example to show how it  clusters increasing and decreasing trends. 
 
 ```python
 >>> from trendypy.trendy import Trendy
@@ -35,6 +35,25 @@ Trendy has scikit-learn like api to allow easy integration to existing programs.
 >>> print(trendy.labels_)
 [0, 0, 1, 1]
 >>> trendy.predict([[0.9, 2, 3.1, 4]]) # another increasing trend
+[0]
+
+```
+
+It can also be utilized to cluster strings by using string similarity metrics.
+
+```python
+>>> from trendypy.trendy import Trendy
+>>> from trendypy.algos import levenshtein_distance
+>>> company_names = [
+... 	'apple inc', 
+... 	'Apple Inc.', 
+... 	'Microsoft Corporation', 
+... 	'Microsft Corp.']
+>>> trendy = Trendy(n_clusters=2, algorithm=levenshtein_distance)
+>>> trendy.fit(company_names)
+>>> print(trendy.labels_)
+[0, 0, 1, 1]
+>>> trendy.predict(['Apple'])
 [0]
 
 ```
