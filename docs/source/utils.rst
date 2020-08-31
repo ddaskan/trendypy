@@ -1,5 +1,5 @@
-trendypy.utils
---------------
+utils
+-----
 
 .. automodule:: utils
    :members:

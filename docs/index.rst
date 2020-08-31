@@ -11,16 +11,7 @@ TrendyPy Documentation
 
    README.md
    source/seeinaction
-
-
-API Reference
--------------
-.. toctree::
-    :maxdepth: 2
-
-    source/trendy
-    source/algos
-    source/utils
+   source/api_reference
 
 
 Indices and tables

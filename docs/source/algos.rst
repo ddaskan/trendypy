@@ -1,5 +1,5 @@
-trendypy.algos
---------------
+algos
+-----
 
 .. automodule:: algos
    :members:
