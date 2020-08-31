@@ -17,7 +17,7 @@ def dtw_distance(x, y, d=utils.distance_euclidean, scaled=False):
         scaled (bool): should arrays be scaled (i.e. 0-1) before calculation
 
     Returns:
-        float: distance, 0.0 means arrays are exactly same, upper limit is 
+        float: distance, 0.0 means arrays are exactly same, upper limit is\
             positive infinity
 
     References:
@@ -63,7 +63,7 @@ def fastdtw_distance(x, y, d=utils.distance_euclidean):
         d (func): distance function, default is euclidean
 
     Returns:
-        float: distance, 0.0 means arrays are exactly same, upper limit is 
+        float: distance, 0.0 means arrays are exactly same, upper limit is\
             positive infinity
 
     References:
@@ -90,7 +90,7 @@ def levenshtein_distance(x, y):
         y (str): input string 2
 
     Returns:
-        int: distance, 0 means strings are exactly same, upper limit is 
+        int: distance, 0 means strings are exactly same, upper limit is\
             positive infinity
 
     References:
