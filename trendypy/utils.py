@@ -41,6 +41,8 @@ def distance_abs(x, y):
     '''
     return float(abs(x - y))
 
+abs_distance = distance_abs
+
 def distance_euclidean(x, y):
     '''Returns Euclidean distance.
 
@@ -64,3 +66,6 @@ def distance_euclidean(x, y):
 
     '''
     return np.linalg.norm(np.array(x) - np.array(y))
+
+euclidean_distance = distance_euclidean
+
