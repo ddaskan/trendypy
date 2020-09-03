@@ -1,4 +1,4 @@
-# TrendyPy
+# TrendyPy <img src="https://raw.githubusercontent.com/ddaskan/trendypy/master/docs/_static/trendypy.png" align="right" width="120"/>
 
 [![PyPI](https://img.shields.io/pypi/v/trendypy)](https://pypi.org/project/trendypy/)
 [![tests](https://github.com/ddaskan/trendypy/workflows/tests/badge.svg)](https://github.com/ddaskan/trendypy/actions?query=workflow%3Atests)
@@ -8,7 +8,7 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/ddaskan/trendypy)](https://github.com/ddaskan/trendypy)
 [![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fddaskan%2Ftrendypy)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fddaskan%2Ftrendypy)
 
-TrendyPy is a small Python package for trend line clustering. It is developed to create time series clusters by calculating trend similarity distance with [Dynamic Time Warping](https://en.wikipedia.org/wiki/Dynamic_time_warping).
+TrendyPy is a small Python package for sequence clustering. It is initially developed to create time series clusters by calculating trend similarity distance with [Dynamic Time Warping](https://en.wikipedia.org/wiki/Dynamic_time_warping).
 
 ## Installation
 
@@ -22,7 +22,7 @@ TrendyPy depends on Pandas, Numpy and fastdtw and works in Python 3.6+.
 
 ## Quickstart
 
-Trendy has scikit-learn like api to allow easy integration to existing programs. Below is a quick example to show how it  clusters increasing and decreasing trends. 
+Trendy has scikit-learn like api to allow easy integration to existing programs. Below is a quick example to show how it clusters increasing and decreasing trends. 
 
 ```python
 >>> from trendypy.trendy import Trendy
