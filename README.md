@@ -1,4 +1,6 @@
-# TrendyPy <img src="https://raw.githubusercontent.com/ddaskan/trendypy/master/docs/_static/trendypy.png" align="right" width="120"/>
+# TrendyPy 
+
+<img src="https://raw.githubusercontent.com/ddaskan/trendypy/master/docs/_static/trendypy.png" align="right" width="120"/>
 
 [![PyPI](https://img.shields.io/pypi/v/trendypy)](https://pypi.org/project/trendypy/)
 [![tests](https://github.com/ddaskan/trendypy/workflows/tests/badge.svg)](https://github.com/ddaskan/trendypy/actions?query=workflow%3Atests)
