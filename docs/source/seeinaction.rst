@@ -123,10 +123,10 @@ Define a function to read the image and convert to a numpy array.
 
    from PIL import Image
    import numpy as np
-   def load_image(file) :
-       img = Image.open(file)
-       img.load()
-       return np.asarray(img, dtype="int32")
+   def load_image(file):
+      img = Image.open(file)
+      img.load()
+      return np.asarray(img, dtype="int32")
 
 Read images and assign them into lists.
 
@@ -186,3 +186,68 @@ Looks like it correctly predicts new data as well.
 
    Because of the limitation of the selected metric function (i.e. `Euclidean Distance <https://en.wikipedia.org/wiki/Euclidean_distance>`_), I had to cherry pick images with exact same sizes (i.e. 352×288). Depending on the function you choose, you may or may not do the same.
 
+
+Custom Metric
+-------------
+
+TrendyPy is flexible enough to be able to utilize user defined metrics. In this example, I'll show how to create your own metric and use it during the clustering.
+
+Let's say we want to cluster DNA sequences and need a metric to do that. `Needleman–Wunsch algorithm <https://en.wikipedia.org/wiki/Needleman%E2%80%93Wunsch_algorithm>`_ is an algorithm used in bioinformatics to align protein or nucleotide sequences. It's not a metric but it inspires us to create our own metric. The metric basically compares two sequences with same length and it penalizes each mismatch by increasing the distance by `p` then divides it to total length.
+
+.. ipython:: python
+
+   def my_metric(x, y, p=1):
+      assert len(x) == len(y)
+      dist = 0
+      for i in range(len(x)):
+         if x[i] != y[i]:
+            dist += p
+      return dist/len(x)
+
+As you can see, you just need to consider inputs and output of your custom function. Specifically,
+
+#. Input must have `x` and `y` for two data points to compare. You may have other default arguments (e.g. `p`).
+#. Output must be a float. 0 indicates same and greater is farther. 
+
+.. note::
+
+   Technically, any float range should work as the output of the custom function as long as greater is farther. However, it won't be named as `metric` in that case.
+
+Anyway, let's use it.
+
+.. ipython:: python
+
+   set_of_sequences = [
+      'AAATTT', 'AAACTT', 'AAATCT', # group 1
+      'GACTAG', 'GGCTAG', 'GACAAG' # group 2
+   ]
+
+.. ipython:: python
+
+   from trendypy.trendy import Trendy
+   trendy = Trendy(
+      n_clusters=2, # there are 2 groups
+      algorithm=my_metric # this is where to set custom metric
+   )
+   trendy.fit(set_of_sequences)
+   trendy.labels_
+
+.. ipython:: python
+   :suppress:
+
+   assert trendy.labels_ == [0, 0, 0, 1, 1, 1]
+
+It clearly clusters first and second group. Now, let's see on new data.
+
+.. ipython:: python
+
+   new_seq1 = 'AAAGGT' # similar to group 1
+   new_seq2 = 'GTCCAG' # similar to group 2
+   trendy.predict([new_seq1, new_seq2])
+
+.. ipython:: python
+   :suppress:
+
+   assert trendy.predict([new_seq1, new_seq2]) == [0, 1]
+
+Very simple.
