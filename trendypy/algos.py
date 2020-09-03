@@ -7,7 +7,7 @@ import numpy as np
 from fastdtw import fastdtw
 from trendypy import utils
 
-def dtw_distance(x, y, d=utils.distance_euclidean, scaled=False):
+def dtw_distance(x, y, d=utils.euclidean_distance, scaled=False):
     '''Returns the distance of two arrays with dynamic time warping method.
 
     Args:
@@ -53,7 +53,7 @@ def dtw_distance(x, y, d=utils.distance_euclidean, scaled=False):
             
     return DTW[n-1, m-1]
 
-def fastdtw_distance(x, y, d=utils.distance_euclidean):
+def fastdtw_distance(x, y, d=utils.euclidean_distance):
     '''Dynamic Time Warping (DTW) algorithm with an O(N) time and memory 
     complexity.
 

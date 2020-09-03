@@ -22,7 +22,7 @@ def scale_01(x):
     arr_max = max(x)
     return x / float(arr_max)
 
-def distance_abs(x, y):
+def abs_distance(x, y):
     '''Returns absolute distance.
 
     Args:
@@ -33,17 +33,15 @@ def distance_abs(x, y):
         float: \|x-y\|
 
     Example:
-        >>> distance_abs(5, 7)
+        >>> abs_distance(5, 7)
         2.0
-        >>> distance_abs(4, 1)
+        >>> abs_distance(4, 1)
         3.0
 
     '''
     return float(abs(x - y))
 
-abs_distance = distance_abs
-
-def distance_euclidean(x, y):
+def euclidean_distance(x, y):
     '''Returns Euclidean distance.
 
     Args:
@@ -58,14 +56,12 @@ def distance_euclidean(x, y):
 
     Examples:
         >>> x, y = 1, 2
-        >>> distance_euclidean(x, y)
+        >>> euclidean_distance(x, y)
         1.0
         >>> x, y = [1, 2], [4, 6]
-        >>> distance_euclidean(x, y)
+        >>> euclidean_distance(x, y)
         5.0
 
     '''
     return np.linalg.norm(np.array(x) - np.array(y))
-
-euclidean_distance = distance_euclidean
 
