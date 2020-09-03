@@ -58,7 +58,7 @@ It can also be utilized to cluster strings by using string similarity metrics.
 
 ```
 
-Refer to [extensive demo](https://trendypy.readthedocs.io/en/v0.2.0/source/seeinaction.html) to see it in clustering [stock trends](https://trendypy.readthedocs.io/en/v0.2.0/source/seeinaction.html#stock-data), [images](https://trendypy.readthedocs.io/en/v0.2.0/source/seeinaction.html#image-clustering) or to see how to [define your own metric](https://trendypy.readthedocs.io/en/v0.2.0/source/seeinaction.html#custom-metric) or just check [API Reference](https://trendypy.readthedocs.io/en/v0.2.0/source/api_reference.html) for details.
+Refer to [extensive demo](https://trendypy.readthedocs.io/en/latest/source/seeinaction.html) to see it in clustering [stock trends](https://trendypy.readthedocs.io/en/latest/source/seeinaction.html#stock-data), [images](https://trendypy.readthedocs.io/en/latest/source/seeinaction.html#image-clustering) or to see how to [define your own metric](https://trendypy.readthedocs.io/en/latest/source/seeinaction.html#custom-metric) or just check [API Reference](https://trendypy.readthedocs.io/en/latest/source/api_reference.html) for details.
 
 ## Post
 The idea is originated from the post [Trend Clustering](http://www.doganaskan.com/blog/posts/trendcluster.html).
