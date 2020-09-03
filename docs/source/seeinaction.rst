@@ -145,7 +145,7 @@ Read images and assign them into lists.
       load_image('image_data/chopper-02.gif'),
       load_image('image_data/chopper-03.gif')]
 
-`Euclidean Distance <https://en.wikipedia.org/wiki/Euclidean_distance>`_ is a simple metric to calculate similarity of images in computer vision. So, we can use `euclidean_distance <utils.html#utils.euclidean_distance>`_ from `utils <utils.html>`_ module.
+`Euclidean Distance <https://en.wikipedia.org/wiki/Euclidean_distance>`_ can be used to calculate the similarity between images. So, let's import `euclidean_distance <utils.html#utils.euclidean_distance>`_ from `utils <utils.html>`_ module, then assign it as `algorithm` argument during the initialization.
 
 .. ipython:: python
 
