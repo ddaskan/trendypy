@@ -1,5 +1,5 @@
-trendypy.trendy
----------------
+trendy
+------
 
 .. automodule:: trendy
    :members:

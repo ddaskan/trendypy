@@ -3,6 +3,7 @@ import sys
 sys.path.append('../')
 sys.path.append('../trendypy/')
 from trendypy.trendy import Trendy
+from trendypy.algos import levenshtein_distance
 
 class TestTrendy(unittest.TestCase):
 
@@ -67,6 +68,17 @@ class TestTrendy(unittest.TestCase):
             [6.4, 4.4, 3.9, 3],
             [6, 3.5, 3.9, 3, 1.5]])
         self.assertEqual(preds, [0, 1, 1])
+
+    def test_string_clustering(self):
+        company_names = [
+            'apple inc', 
+            'Apple Inc.', 
+            'Microsoft Corporation', 
+            'Microsft Corp.']
+        trendy = Trendy(n_clusters=2, algorithm=levenshtein_distance)
+        trendy.fit(company_names)
+        self.assertEqual(trendy.labels_, [0, 0, 1, 1])
+        self.assertEqual(trendy.predict(['Apple']), [0])
 
 if __name__ == '__main__':
     unittest.main()

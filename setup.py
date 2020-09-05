@@ -8,7 +8,7 @@ with open('requirements.txt', 'r') as f:
 
 setuptools.setup(
     name="trendypy",
-    version="0.1.1",
+    version="0.2.0",
     author="Dogan Askan",
     author_email="doganaskan@gmail.com",
     description="A package for trend line clustering.",
