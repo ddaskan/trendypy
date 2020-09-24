@@ -29,10 +29,10 @@ class Trendy():
         [0]
 
     '''
-    labels_ = None
-    cluster_centers_ = None
-
     def __init__(self, n_clusters, algorithm=algos.fastdtw_distance):
+
+        self.labels_ = None
+        self.cluster_centers_ = None
         
         self.n_clusters = int(n_clusters)
         if not self.n_clusters >= 2:
