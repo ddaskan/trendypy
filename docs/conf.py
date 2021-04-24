@@ -103,7 +103,7 @@ napoleon_use_rtype = True
 napoleon_use_keyword = True
 napoleon_custom_sections = None
 
-copybutton_prompt_text = '>>> |\\\\.\\\\.\\\\. |\\\\$ |In \\\\[\\\\d*\\\\]: |\\\\s+\\.\\.\\.\\.: '
+copybutton_prompt_text = '>>> |\\\\.\\\\.\\\\. |\\\\$ |In \\\\[\\\\d*\\\\]: |\\\\s+\\.\\.\\.: '
 copybutton_prompt_is_regexp = True
 
 ipython_savefig_dir = ""
