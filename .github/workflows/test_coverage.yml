@@ -48,3 +48,21 @@ jobs:
         name: codecov-umbrella
         fail_ci_if_error: true
         path_to_write_report: ./codecov_report_${{ matrix.os }}_py${{ matrix.python-version }}.gz
+
+  publish-test-results:
+    name: "Publish Unit Tests Results"
+    needs: build
+    runs-on: ubuntu-latest
+    # the build job might be skipped, we don't need to run this job then
+    if: success() || failure()
+
+    steps:
+      - name: Download Artifacts
+        uses: actions/download-artifact@v2
+        with:
+          path: artifacts
+
+      - name: Publish Unit Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v1
+        with:
+          files: artifacts/**/*.xml
