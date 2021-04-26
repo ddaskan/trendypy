@@ -21,11 +21,11 @@ sys.path.append('../trendypy/')
 # -- Project information -----------------------------------------------------
 
 project = 'TrendyPy'
-copyright = '2020, Dogan Askan'
+copyright = '2020-2021, Dogan Askan'
 author = 'Dogan Askan'
 
 # The full version, including alpha/beta/rc tags
-release = '0.2.1'
+release = '0.2.2'
 
 
 # -- General configuration ---------------------------------------------------
@@ -103,7 +103,7 @@ napoleon_use_rtype = True
 napoleon_use_keyword = True
 napoleon_custom_sections = None
 
-copybutton_prompt_text = '>>> |\\\\.\\\\.\\\\. |\\\\$ |In \\\\[\\\\d*\\\\]: |\\\\s+\\.\\.\\.: '
+copybutton_prompt_text = '>>> |\\\\.\\\\.\\\\. |\\\\$ |In \\\\[\\\\d*\\\\]: |\\\\s+\\.\\.\\.\\.: '
 copybutton_prompt_is_regexp = True
 
 ipython_savefig_dir = ""

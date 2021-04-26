@@ -6,7 +6,7 @@
 [![tests](https://github.com/ddaskan/trendypy/workflows/tests/badge.svg)](https://github.com/ddaskan/trendypy/actions?query=workflow%3Atests)
 [![Codecov](https://codecov.io/gh/ddaskan/trendypy/master.svg)](https://codecov.io/gh/ddaskan/trendypy/)
 [![Documentation Status](https://readthedocs.org/projects/trendypy/badge/?version=latest)](https://trendypy.readthedocs.io/en/latest/?badge=latest)
-[![PyPI - Downloads](https://img.shields.io/pypi/dm/trendypy)](https://pypi.org/project/trendypy/)
+[![Downloads](https://pepy.tech/badge/trendypy)](https://pepy.tech/project/trendypy)
 [![GitHub last commit](https://img.shields.io/github/last-commit/ddaskan/trendypy)](https://github.com/ddaskan/trendypy)
 [![Twitter](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgithub.com%2Fddaskan%2Ftrendypy)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fddaskan%2Ftrendypy)
 
@@ -20,7 +20,7 @@ You can install TrendyPy with pip.
 pip install trendypy
 ```
 
-TrendyPy depends on Pandas, Numpy and fastdtw and works in Python 3.6+.
+TrendyPy depends on Pandas, Numpy and fastdtw and works in Python 3.7+.
 
 ## Quickstart
 

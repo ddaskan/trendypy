@@ -1,13 +1,11 @@
-# This workflow will install Python dependencies, run tests and create a coverage report.
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+# Weekly tests to be sure dependencies are up-to-date
 
-name: tests_and_coverage
+name: tests
 
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  workflow_dispatch:
+  schedule:
+    - cron:  '17 10 * * 5'
 
 jobs:
   build:
@@ -33,6 +31,7 @@ jobs:
         pip install pytest
         pip install pytest-cov
         python -m doctest README.md
+        python -m doctest docs/source/quickstart.rst
         pytest --doctest-modules --junitxml=junit/test-results-${{ matrix.os }}-py${{ matrix.python-version }}.xml --cov=trendypy --cov-report=xml --cov-report=html
     - name: Upload pytest test results
       uses: actions/upload-artifact@v2
@@ -41,28 +40,3 @@ jobs:
         path: junit/test-results-${{ matrix.os }}-py${{ matrix.python-version }}.xml
       # Use always() to always run this step to publish test results when there are test failures
       if: ${{ always() }}
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v1
-      with:
-        directory: ./
-        name: codecov-umbrella
-        fail_ci_if_error: true
-        path_to_write_report: ./codecov_report_${{ matrix.os }}_py${{ matrix.python-version }}.gz
-
-  publish-test-results:
-    name: "Publish Unit Tests Results"
-    needs: build
-    runs-on: ubuntu-latest
-    # the build job might be skipped, we don't need to run this job then
-    if: success() || failure()
-
-    steps:
-      - name: Download Artifacts
-        uses: actions/download-artifact@v2
-        with:
-          path: artifacts
-
-      - name: Publish Unit Test Results
-        uses: EnricoMi/publish-unit-test-result-action@v1
-        with:
-          files: artifacts/**/*.xml

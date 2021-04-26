@@ -124,26 +124,29 @@ Define a function to read the image and convert to a numpy array.
    from PIL import Image
    import numpy as np
    def load_image(file):
-      img = Image.open(file)
-      img.load()
-      return np.asarray(img, dtype="int32")
+       img = Image.open(file)
+       img.load()
+       return np.asarray(img, dtype="int32")
 
 Read images and assign them into lists.
 
 .. ipython:: python
 
    cars = [
-      load_image('image_data/car-01.gif'),
-      load_image('image_data/car-02.gif'),
-      load_image('image_data/car-03.gif')]
+       load_image('image_data/car-01.gif'),
+       load_image('image_data/car-02.gif'),
+       load_image('image_data/car-03.gif')
+   ]
    carriages = [
-      load_image('image_data/carriage-02.gif'),
-      load_image('image_data/carriage-03.gif'),
-      load_image('image_data/carriage-04.gif')]
+       load_image('image_data/carriage-02.gif'),
+       load_image('image_data/carriage-03.gif'),
+       load_image('image_data/carriage-04.gif')
+   ]
    choppers = [
-      load_image('image_data/chopper-01.gif'),
-      load_image('image_data/chopper-02.gif'),
-      load_image('image_data/chopper-03.gif')]
+       load_image('image_data/chopper-01.gif'),
+       load_image('image_data/chopper-02.gif'),
+       load_image('image_data/chopper-03.gif')
+   ]
 
 `Euclidean Distance <https://en.wikipedia.org/wiki/Euclidean_distance>`_ can be used to calculate the similarity between images. So, let's import `euclidean_distance <utils.html#utils.euclidean_distance>`_ from `utils <utils.html>`_ module, then assign it as `algorithm` argument during the initialization.
 
@@ -197,12 +200,12 @@ Let's say we want to cluster DNA sequences and need a metric to do that. `Needle
 .. ipython:: python
 
    def my_metric(x, y, p=1):
-      assert len(x) == len(y)
-      dist = 0
-      for i in range(len(x)):
-         if x[i] != y[i]:
-            dist += p
-      return dist/len(x)
+       assert len(x) == len(y)
+       dist = 0
+       for i in range(len(x)):
+           if x[i] != y[i]:
+               dist += p
+       return dist/len(x)
 
 As you can see, you just need to consider inputs and output of your custom function. Specifically,
 
@@ -218,16 +221,16 @@ Anyway, let's use it.
 .. ipython:: python
 
    set_of_sequences = [
-      'AAATTT', 'AAACTT', 'AAATCT', # group 1
-      'GACTAG', 'GGCTAG', 'GACAAG' # group 2
+       'AAATTT', 'AAACTT', 'AAATCT', # group 1
+       'GACTAG', 'GGCTAG', 'GACAAG' # group 2
    ]
 
 .. ipython:: python
 
    from trendypy.trendy import Trendy
    trendy = Trendy(
-      n_clusters=2, # there are 2 groups
-      algorithm=my_metric # this is where to set custom metric
+       n_clusters=2, # there are 2 groups
+       algorithm=my_metric # this is where to set custom metric
    )
    trendy.fit(set_of_sequences)
    trendy.labels_
