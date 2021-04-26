@@ -21,7 +21,7 @@ sys.path.append('../trendypy/')
 # -- Project information -----------------------------------------------------
 
 project = 'TrendyPy'
-copyright = '2020, Dogan Askan'
+copyright = '2020-2021, Dogan Askan'
 author = 'Dogan Askan'
 
 # The full version, including alpha/beta/rc tags
