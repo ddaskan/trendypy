@@ -31,7 +31,6 @@ jobs:
         pip install pytest
         pip install pytest-cov
         python -m doctest README.md
-        python -m doctest docs/source/quickstart.rst
         pytest --doctest-modules --junitxml=junit/test-results-${{ matrix.os }}-py${{ matrix.python-version }}.xml --cov=trendypy --cov-report=xml --cov-report=html
     - name: Upload pytest test results
       uses: actions/upload-artifact@v2
